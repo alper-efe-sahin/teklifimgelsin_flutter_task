@@ -9,9 +9,8 @@ Widget DetailsPageBody(
       return ListView.builder(
           itemCount: snapshotData.data["offers"].length,
           itemBuilder: (BuildContext context, int index) {
-            print(snapshotData.data);
             final int amount = snapshotData.data["amount"];
-            final int maturity = snapshotData.data["amount"];
+            final int maturity = snapshotData.data["maturity"];
             final String bankName = snapshotData.data["offers"][index]["bank"];
             final double interestRate =
                 snapshotData.data["offers"][index]["interest_rate"];

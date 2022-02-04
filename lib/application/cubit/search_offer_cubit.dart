@@ -15,7 +15,11 @@ class SearchOfferCubit extends Cubit<SearchOfferState> {
   }
 
   void setTotalMaturity(double value) {
-    emit(state.copyWith(maturity: value));
+    if (value > 50000) {
+      emit(state.copyWith(maturity: 24));
+    } else {
+      emit(state.copyWith(maturity: value));
+    }
   }
 
   double calculateMonthlyPayment({required interestRate, required maturity}) {
