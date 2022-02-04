@@ -1,19 +1,20 @@
-import 'dart:convert';
-import 'package:http/http.dart' as http;
+import 'package:dio/dio.dart';
 
 class PostRequest {
-  Future postData() async {
-    var url = Uri.parse('https://teklifimgelsin.com/api/briefLoanOffer');
+  Future postData(
+      {required int amount,
+      required int maturity,
+      int type = 0,
+      int offerCount = 3}) async {
+    var dio = Dio();
+    dio.options.baseUrl = 'https://teklifimgelsin.com/api';
+    final response = await dio.post('/briefLoanOffer', data: {
+      'amount': amount,
+      'maturity': maturity,
+      "type": type,
+      "offer_count": offerCount
+    });
 
-    final Map<String, int> body = {
-      'amount': 20000,
-      'maturity': 36,
-      "type": 0,
-      "offer_count": 3
-    };
-
-    await http.post(url, body: jsonEncode(body), headers: {
-      "Content-Type": "application/json",
-    }).then((value) => print(value.statusCode));
+    return response.data;
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:teklifimgelsin_flutter_task/presentation/pages/result_page.dart';
 import 'package:teklifimgelsin_flutter_task/presentation/pages/search_page.dart';
 
 void main() => runApp(const AppWidget());
@@ -8,6 +9,12 @@ class AppWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(title: 'Material App', home: SearchPage());
+    return MaterialApp(
+      title: 'TeklifimGelsin',
+      routes: {
+        '/': (context) => const SearchPage(),
+        '/ResultPageRoute': (context) => const ResultPage()
+      },
+    );
   }
 }
