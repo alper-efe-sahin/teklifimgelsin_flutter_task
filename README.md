@@ -1,16 +1,11 @@
 # teklifimgelsin_flutter_task
 
-A new Flutter project.
+Note: null values coming from the API service.
 
-## Getting Started
+## Gifs from the App
 
-This project is a starting point for a Flutter application.
+![1](https://user-images.githubusercontent.com/67283777/152608128-cfcbb045-4fc6-42b5-86e4-339b9ce47919.gif)
 
-A few resources to get you started if this is your first Flutter project:
+![2](https://user-images.githubusercontent.com/67283777/152608134-d1a4394d-bd5a-4384-b254-e2bb96821e02.gif)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
